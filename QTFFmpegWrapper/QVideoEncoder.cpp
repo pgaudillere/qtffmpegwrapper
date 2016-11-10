@@ -16,7 +16,7 @@ THIS SOFTWARE IS PROVIDED BY COPYRIGHT HOLDERS ``AS IS'' AND ANY EXPRESS OR IMPL
 #include <QPainter>
 #include "QVideoEncoder.h"
 #include "ffmpeg.h"
-
+#define snprintf(buf,len, format,...) _snprintf_s(buf, len,len, format, __VA_ARGS__)
 
 
 /******************************************************************************

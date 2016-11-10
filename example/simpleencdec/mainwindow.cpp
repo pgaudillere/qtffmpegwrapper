@@ -315,7 +315,7 @@ void MainWindow::GenerateSyntheticVideo(QString filename, bool vfr)
       {
          // Variable frame rate: the pts of the first frame is 0,
          // subsequent frames slow down
-         pts += sqrt(i);
+         pts += sqrt((double)i);
          if(i==0)
             size=encoder.encodeImagePts(frame,0);
          else

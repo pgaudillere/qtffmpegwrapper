@@ -50,10 +50,10 @@ int ConsoleInit(void)
 	SetConsoleMode(hStdout, ENABLE_PROCESSED_OUTPUT);
  
 	//redirects std output to console buffer, so that printf works
-	//freopen( "CON", "w", stdout );  //redirects stdout to console, but 
+    freopen( "CON", "w", stdout );  //redirects stdout to console, but
 	//doesn"t work after SetConsoleActiveScreenBuffer issued
-   freopen("CONOUT$", "wta", stdout);
-	//freopen("CONOUT$", "wta+", stdout);
+   //freopen("CONOUT$", "wta", stdout);
+    //freopen("CONOUT$", "wta+", stdout);
  	
 	//Also let us read from console with c library, since I can"t get 
 	//ReadConsole to work
